@@ -2,19 +2,72 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Redirigiendo a la PWA de disimple49...</title>
+  <title>Cargando disimple49 Art...</title> 
   
-  <!-- Redirección instantánea usando Meta Refresh -->
+  <!-- **IMPORTANTE: Redirección (0 segundos es casi instantáneo) ** -->
+  <!-- Si quieres que esta pantalla se vea un poco más, puedes cambiar content="0" a content="1" (1 segundo) -->
   <meta http-equiv="refresh" content="0; url=https://script.google.com/macros/s/AKfycbwbYBqT4ZAKIG4FbTTOqtL-8rYNkZ3ttVJ2Yi_iM7OiU673hFTyQKy2NA0mePuVCXK36g/exec">
   
-  <!-- Enlace canónico para indicar la URL principal a los buscadores -->
   <link rel="canonical" href="https://script.google.com/macros/s/AKfycbwbYBqT4ZAKIG4FbTTOqtL-8rYNkZ3ttVJ2Yi_iM7OiU673hFTyQKy2NA0mePuVCXK36g/exec"/>
 
-  <!-- Alternativa con JavaScript (comentada, no necesaria si usas meta refresh) -->
-  <!-- <script> window.location.href = "https://script.google.com/macros/s/AKfycbwbYBqT4ZAKIG4FbTTOqtL-8rYNkZ3ttVJ2Yi_iM7OiU673hFTyQKy2NA0mePuVCXK36g/exec"; </script> -->
+  <style>
+    /* Estilos muy básicos para la pantalla de carga */
+    body {
+      margin: 0;
+      padding: 0;
+      /* Un fondo degradado suave inspirado en tu PWA */
+      background: linear-gradient(135deg, #f3e7e9 0%, #e3eeff 100%); 
+      /* Alternativa: Fondo sólido lila claro */
+      /* background-color: #e6e0f8; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; /* Ocupa toda la altura */
+      font-family: sans-serif; /* Fuente simple y rápida */
+      color: #5a4a7e; /* Un color oscuro suave para el texto/icono */
+      overflow: hidden; /* Evita barras de scroll si algo se desborda */
+    }
+    .loader {
+      text-align: center;
+    }
+    .loader svg { /* Estilo simple para un SVG si lo usaras */
+       width: 50px;
+       height: 50px;
+       margin-bottom: 15px;
+       /* Podrías incluir un SVG aquí o usar un emoji */
+    }
+    .loader span { /* Estilo para el emoji */
+        font-size: 48px; /* Tamaño del emoji */
+        display: block;
+        margin-bottom: 10px;
+        /* Animación simple de pulso (opcional, puede que no se vea) */
+        animation: pulse 1.5s infinite ease-in-out;
+    }
+    .loader p {
+      font-size: 18px;
+      margin: 0;
+    }
+
+    /* Animación de pulso (opcional) */
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.8; }
+    }
+
+  </style>
 </head>
 <body>
-  <p>Estás siendo redirigido a la PWA de disimple49.</p>
-  <p>Si la redirección no funciona automáticamente, <a href="https://script.google.com/macros/s/AKfycbwbYBqT4ZAKIG4FbTTOqtL-8rYNkZ3ttVJ2Yi_iM7OiU673hFTyQKy2NA0mePuVCXK36g/exec">haz clic aquí</a>.</p>
+  <div class="loader">
+      <!-- Usamos un emoji de paleta de artista, rápido y fácil -->
+      <span>🎨</span> 
+      <!-- Podrías descomentar y poner un SVG aquí si prefieres -->
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"> ... tu código SVG ... </svg> -->
+      <p>Cargando Arte...</p> 
+  </div>
+
+  <!-- Nota: Aunque hay diseño, la redirección (meta refresh) en el head 
+       intentará ejecutarse lo antes posible. La visibilidad de este diseño 
+       dependerá de la velocidad del navegador y la conexión. -->
 </body>
 </html>
